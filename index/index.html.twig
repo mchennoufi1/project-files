@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{# templates/index/index.html.twig #}
+{% block body %}
+    <div class="example-wrapper">
+<br>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            {% for data in category %}
+            <tr>
+                <td>{{ data.name }}</td>
+                <td>{{ data.description }}</td>
+                <td><a href="{{ data.id }}"><img src="img/{{ data.img }}" style="width: 150px"></a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

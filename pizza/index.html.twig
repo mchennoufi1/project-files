@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PizzaController!{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <br>
+
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Image</th>
+            </tr>
+            {% for data in pizza %}
+                <tr>
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.price }}</td>
+                    <td>{{ data.description }}</td>
+                    <td><img src="img/{{ data.img }}" style="width: 150px"></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
