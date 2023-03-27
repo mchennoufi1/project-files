@@ -11,12 +11,15 @@
                 <th>Image</th>
             </tr>
             {% for data in category %}
+
             <tr>
-                <td>{{ data.name }}</td>
+                <td><a href="{{ path('app_pizza', {'id': data.id}) }}">{{ data.name }}</a></td>
                 <td>{{ data.description }}</td>
-                <td><a href="{{ data.id }}"><img src="img/{{ data.img }}" style="width: 150px"></a></td>
+                <td><img src="img/{{ data.img }}" style="width: 150px"></td>
             </tr>
             {% endfor %}
         </table>
     </div>
 {% endblock %}
+
+

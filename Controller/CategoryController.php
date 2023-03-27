@@ -19,3 +19,4 @@ class CategoryController extends AbstractController
         ]);
     }
 }
+

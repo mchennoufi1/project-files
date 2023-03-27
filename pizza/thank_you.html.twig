@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Thank you!{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h1>Thank you for your order!</h1>
+        <p>Your order details:</p>
+        <ul>
+            <li>Name: {{ order.name }}</li>
+            <li>Address: {{ order.customerAddress }}</li>
+            <li>Address: {{ order.customerName }}</li>
+            <li>Size: {{ order.size }} inches</li>
+            <li>Price: ${{ order.price }}</li>
+            <li>Quantity: {{ order.quantity }}</li>
+        </ul>
+    </div>
+{% endblock %}

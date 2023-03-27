@@ -13,14 +13,21 @@
                 <th>Description</th>
                 <th>Image</th>
             </tr>
-            {% for data in pizza %}
-                <tr>
-                    <td>{{ data.name }}</td>
-                    <td>{{ data.price }}</td>
-                    <td>{{ data.description }}</td>
-                    <td><img src="img/{{ data.img }}" style="width: 150px"></td>
-                </tr>
+            {% for pizza in pizzas %}
+                {% if pizza.category == category %}
+                    <tr>
+                        <td>{{ pizza.name }}</td>
+                        <td><p>{{ pizza.price }}</p></td>
+                        <td><p>{{ pizza.description }}</p></td>
+                        <td><img src="{{ asset('img/' ~ pizza.img) }}" alt="{{ pizza.name }}" style="width: 200px"></td>
+
+
+                    </tr>
+                {% endif %}
             {% endfor %}
         </table>
+        {{ form(form) }}
     </div>
 {% endblock %}
+
+
